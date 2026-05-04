@@ -28,6 +28,18 @@ Nahla Couture is a monolithic Express + EJS application with a service layer and
    npm run dev
    ```
 
+## Run with Docker
+
+1. Build and start the app and database:
+
+   ```bash
+   docker compose up --build
+   ```
+
+2. Open the app at http://localhost:3000
+
+3. phpMyAdmin is available at http://localhost:8080
+
 ## Database
 
 - MySQL runs locally via Docker.

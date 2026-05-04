@@ -1,6 +1,23 @@
 version: "3.9"
 
 services:
+  app:
+    build: .
+    container_name: nahla_app
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    environment:
+      PORT: "3000"
+      SESSION_SECRET: "change-me"
+      DB_HOST: "mysql"
+      DB_USER: "couture_user"
+      DB_PASSWORD: "couture_pass"
+      DB_NAME: "couture_reservations"
+      DB_PORT: "3306"
+    ports:
+      - "3000:3000"
+
   mysql:
     image: mysql:8
     container_name: nahla_mysql
