@@ -1,0 +1,53 @@
+<section class="nc-section">
+  <div class="nc-container">
+    <div class="nc-page-header reveal">
+      <span class="nc-kicker">Admin Dashboard</span>
+      <h1 class="display-5">Atelier operations overview</h1>
+      <p class="nc-subtitle">Monitor reservations, client requests, and updates.</p>
+    </div>
+
+    <div class="row g-4 mb-4">
+      <div class="col-md-4">
+        <div class="nc-admin-card reveal">
+          <div class="nc-kicker">Reservations today</div>
+          <div class="display-6"><%= stats ? stats.reservationsToday : 0 %></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="nc-admin-card reveal" style="--delay: 0.1s;">
+          <div class="nc-kicker">Pending reservations</div>
+          <div class="display-6"><%= stats ? stats.pendingReservations : 0 %></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="nc-admin-card reveal" style="--delay: 0.2s;">
+          <div class="nc-kicker">Notifications sent</div>
+          <div class="display-6"><%= stats ? stats.notificationsSent : 0 %></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="nc-card reveal">
+          <span class="nc-kicker">Today</span>
+          <h2 class="h4">Client appointments and fittings</h2>
+          <p class="mb-0">
+            Review the latest submissions, confirm upcoming fittings, and
+            coordinate atelier notes.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="nc-card reveal" style="--delay: 0.1s;">
+          <span class="nc-kicker">Quick actions</span>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">Review new reservation requests</li>
+            <li class="mb-2">Update couture calendar</li>
+            <li class="mb-0">Send fitting confirmations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

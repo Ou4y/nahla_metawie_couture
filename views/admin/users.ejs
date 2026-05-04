@@ -1,0 +1,36 @@
+<section class="nc-section">
+  <div class="nc-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <span class="nc-kicker">Admin</span>
+        <h1 class="h3 mb-0">Users</h1>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table nc-table align-middle">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (users && users.length) { %>
+            <% users.forEach(function (user) { %>
+              <tr>
+                <td><%= user.first_name %> <%= user.last_name %></td>
+                <td><%= user.email %></td>
+                <td><%= user.role %></td>
+              </tr>
+            <% }); %>
+          <% } else { %>
+            <tr>
+              <td colspan="3" class="nc-muted">No users yet.</td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

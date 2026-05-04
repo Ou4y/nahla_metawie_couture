@@ -1,0 +1,38 @@
+<section class="nc-section">
+  <div class="nc-container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-5">
+        <div class="nc-page-header text-center reveal">
+          <span class="nc-kicker">Welcome back</span>
+          <h1 class="display-6">Sign in</h1>
+          <p class="nc-subtitle">you can register if you don't have an account.</p>
+        </div>
+        <form method="POST" action="/auth/login" class="nc-card reveal" style="--delay: 0.1s;">
+          <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input
+              class="form-control"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label class="form-label" for="password">Password</label>
+            <input
+              class="form-control"
+              type="password"
+              id="password"
+              name="password"
+              required
+            />
+          </div>
+          <button class="btn btn-primary w-100" type="submit">Sign In</button>
+          <p class="nc-muted text-center mt-3">or</p>
+          <a class="btn btn-outline-secondary w-100" href="/auth/register">Register</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

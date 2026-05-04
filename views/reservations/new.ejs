@@ -1,0 +1,125 @@
+<section class="nc-section">
+  <div class="nc-container">
+    <div class="nc-page-header reveal">
+      <span class="nc-kicker">Appointment Booking</span>
+      <h1 class="display-5">Reserve a private couture fitting</h1>
+      <p class="nc-subtitle">
+        Share your occasion and preferred dates. Our concierge will confirm a
+        private atelier appointment within 24 hours.
+      </p>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-lg-7 reveal">
+        <form method="POST" action="/reservations" class="nc-card">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label" for="client_name">Full name</label>
+              <input
+                class="form-control"
+                id="client_name"
+                name="client_name"
+                type="text"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="client_phone">Phone</label>
+              <input
+                class="form-control"
+                id="client_phone"
+                name="client_phone"
+                type="tel"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="client_email">Email</label>
+              <input
+                class="form-control"
+                id="client_email"
+                name="client_email"
+                type="email"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="reservation_type">Reservation type</label>
+              <select class="form-select" id="reservation_type" name="reservation_type">
+                <option value="bridal_dress">Bridal couture</option>
+                <option value="basic_dress">Evening couture</option>
+                <option value="occasion_couture">Occasion couture</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="occasion_date">Occasion date</label>
+              <input
+                class="form-control"
+                type="date"
+                id="occasion_date"
+                name="occasion_date"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="desired_date">Preferred date</label>
+              <input
+                class="form-control"
+                type="date"
+                id="desired_date"
+                name="desired_date"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="start_time">Preferred time</label>
+              <input
+                class="form-control"
+                type="time"
+                id="start_time"
+                name="start_time"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="end_time">Alternate time</label>
+              <input
+                class="form-control"
+                type="time"
+                id="end_time"
+                name="end_time"
+                required
+              />
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="notes">Notes</label>
+              <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <button class="btn btn-primary" type="submit">Submit request</button>
+            <a class="btn btn-outline-secondary" href="https://wa.me/0000000000" target="_blank" rel="noopener">
+              WhatsApp concierge
+            </a>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-5 reveal" style="--delay: 0.1s;">
+        <div class="nc-card">
+          <span class="nc-kicker">Process</span>
+          <ol class="mb-4">
+            <li class="mb-2">Submit your preferred date and occasion details.</li>
+            <li class="mb-2">Receive confirmation and preparation guidance.</li>
+            <li class="mb-2">Attend your private fitting at the atelier.</li>
+            <li class="mb-0">Finalize silhouette and couture finishing.</li>
+          </ol>
+          <div class="nc-card">
+            <span class="nc-kicker">WhatsApp</span>
+            <p class="mb-0">
+              For urgent requests, message the atelier concierge directly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

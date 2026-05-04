@@ -1,0 +1,40 @@
+<section class="nc-section">
+  <div class="nc-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <span class="nc-kicker">Admin</span>
+        <h1 class="h3 mb-0">Reservations</h1>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table nc-table align-middle">
+        <thead>
+          <tr>
+            <th>Client</th>
+            <th>Type</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (reservations && reservations.length) { %>
+            <% reservations.forEach(function (reservation) { %>
+              <tr>
+                <td><%= reservation.client_name || "Client" %></td>
+                <td><%= reservation.reservation_type %></td>
+                <td><%= reservation.desired_date %></td>
+                <td><%= reservation.start_time %> - <%= reservation.end_time %></td>
+                <td><%= reservation.status || "pending" %></td>
+              </tr>
+            <% }); %>
+          <% } else { %>
+            <tr>
+              <td colspan="5" class="nc-muted">No reservations yet.</td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

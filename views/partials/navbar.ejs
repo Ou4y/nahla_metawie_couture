@@ -1,0 +1,60 @@
+<div class="nc-brand-band">
+  <div class="nc-container">
+    <a class="nc-brand-lockup" href="/">
+      <span class="nc-logo-frame">
+        <img class="brand-mark" src="/images/nahla-logo.png" alt="Nahla Couture logo" />
+      </span>
+      <span class="brand-wordmark">Nahla Couture</span>
+    </a>
+  </div>
+</div>
+<nav class="navbar nc-navbar navbar-expand-lg navbar-light">
+  <div class="nc-container d-flex align-items-center">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#primaryNav"
+      aria-controls="primaryNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="primaryNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/collections">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">Atelier</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+      </ul>
+      <div class="d-lg-flex align-items-center gap-3 nc-nav-actions">
+        <a class="btn btn-primary" href="/reservations/new">Book Appointment</a>
+        <ul class="navbar-nav ms-lg-2 nc-nav-auth">
+          <% if (isAuthenticated) { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/reservations/mine">My Reservations</a>
+            </li>
+            <% if (currentUser.role === "admin") { %>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin/dashboard">Admin</a>
+              </li>
+            <% } %>
+            <li class="nav-item">
+              <form class="d-inline" action="/auth/logout" method="POST">
+                <button class="btn btn-link nav-link" type="submit">Logout</button>
+              </form>
+            </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/auth/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nc-nav-register" href="/auth/register">Register</a>
+            </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

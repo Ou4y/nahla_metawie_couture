@@ -1,0 +1,15 @@
+<section class="nc-alerts">
+  <div class="nc-container">
+    <% if (flash && flash.success && flash.success.length) { %>
+      <% flash.success.forEach(function (message) { %>
+        <div class="alert alert-success"><%= message %></div>
+      <% }); %>
+    <% } %>
+
+    <% if (flash && flash.error && flash.error.length) { %>
+      <% flash.error.forEach(function (message) { %>
+        <div class="alert alert-danger"><%= message %></div>
+      <% }); %>
+    <% } %>
+  </div>
+</section>
