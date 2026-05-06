@@ -3,12 +3,12 @@ USE couture_reservations;
 -- Admin account (replace password hash before production use)
 INSERT INTO users (email, password_hash, role, first_name, last_name, phone)
 VALUES (
-  'admin@nahla.local',
-  '$2b$10$replace_with_bcrypt_hash',
+  'nahla@admin.admin',
+  '$2a$10$tDNdlQc1e7y1/ZBrvE.jAuzfGQyML7ZVKPi/ZGxDQDACL8kWJOi.u',
   'admin',
   'Nahla',
   'Admin',
-  '+000000000'
+  '+201201774547'
 );
 
 INSERT INTO working_days (id, day_of_week, is_active)
